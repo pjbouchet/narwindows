@@ -1,0 +1,3 @@
+main:
+  script: _targets.R
+  store: /Volumes/GoogleDrive/My Drive/Documents/git/narwind/_targets/
