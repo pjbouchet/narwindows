@@ -5,8 +5,8 @@
 #'
 #' @author Phil J. Bouchet
 #' @docType package
-#' @name narwind
-#' @useDynLib narwind
+#' @name narwindows
+#' @useDynLib narwindows
 NULL
 
 # Quiets concerns of R CMD check re: the .'s that appear in pipelines
