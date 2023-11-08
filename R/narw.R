@@ -190,7 +190,7 @@ narw <- function(nsim = 1e3,
   # Load prey, daylight, and stressor surfaces
   # ............................................................
 
-  coords <- sp::coordinates(density_narw[[1]])
+  coords <- raster::coordinates(density_narw[[1]])
   colnames(coords) <- c("x", "y")
   map_limits <- get_limits(density_narw[[1]])
   map_resolution <- density_narw[[1]]@grid@cellsize
