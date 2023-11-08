@@ -3,7 +3,6 @@
 #include <queue>
 #include <iostream>
 #include <string>
-#include "parallel_hashmap/phmap.h"
 
 // [[Rcpp::export]]
 std::int64_t create_hash (double x0, double y0, double x1, double y1){

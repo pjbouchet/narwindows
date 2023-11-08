@@ -98,7 +98,7 @@ public:
               Eigen::VectorXd resolution_fishing,
               Eigen::VectorXd resolution_vessels,
               Eigen::VectorXd resolution_noise){
-              // phmap::flat_hash_map<std::int64_t, int> hash) {
+
     double d, d_0, a, x0, y0, xn, yn;
     bool sampling = true;
     // int n_interm = 100;
@@ -326,7 +326,6 @@ public:
               Eigen::VectorXd resolution_fishing,
               Eigen::VectorXd resolution_vessels,
               Eigen::VectorXd resolution_noise) {
-              // phmap::flat_hash_map<std::int64_t, int> hash) {
     
     // Rcpp::NumericVector out (3);
     // Rcpp::NumericVector latent_coords (3);
