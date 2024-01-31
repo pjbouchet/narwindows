@@ -98,27 +98,27 @@ NULL
 NULL
 
 transpose_c <- function(m, k) {
-    .Call('_narwind_transpose_c', PACKAGE = 'narwind', m, k)
+    .Call(`_narwindows_transpose_c`, m, k)
 }
 
 multinomial <- function(probs) {
-    .Call('_narwind_multinomial', PACKAGE = 'narwind', probs)
+    .Call(`_narwindows_multinomial`, probs)
 }
 
 random_int <- function(n, lwr = 0L, uppr = 3L) {
-    .Call('_narwind_random_int', PACKAGE = 'narwind', n, lwr, uppr)
+    .Call(`_narwindows_random_int`, n, lwr, uppr)
 }
 
 random_multivariate_normal <- function(mu, Sigma) {
-    .Call('_narwind_random_multivariate_normal', PACKAGE = 'narwind', mu, Sigma)
+    .Call(`_narwindows_random_multivariate_normal`, mu, Sigma)
 }
 
 prob_migration <- function(n, destination, cohortID) {
-    .Call('_narwind_prob_migration', PACKAGE = 'narwind', n, destination, cohortID)
+    .Call(`_narwindows_prob_migration`, n, destination, cohortID)
 }
 
 response_threshold <- function(db) {
-    .Call('_narwind_response_threshold', PACKAGE = 'narwind', db)
+    .Call(`_narwindows_response_threshold`, db)
 }
 
 #' Random deviate from a truncated Normal distribution
@@ -128,226 +128,226 @@ response_threshold <- function(db) {
 #' @param L Lower bound
 #' @param U Upper bound
 rtnorm <- function(location, scale, L, U) {
-    .Call('_narwind_rtnorm', PACKAGE = 'narwind', location, scale, L, U)
+    .Call(`_narwindows_rtnorm`, location, scale, L, U)
 }
 
 rtnorm_vec <- function(n, location, scale, L, U) {
-    .Call('_narwind_rtnorm_vec', PACKAGE = 'narwind', n, location, scale, L, U)
+    .Call(`_narwindows_rtnorm_vec`, n, location, scale, L, U)
 }
 
 start_age <- function(cohort) {
-    .Call('_narwind_start_age', PACKAGE = 'narwind', cohort)
+    .Call(`_narwindows_start_age`, cohort)
 }
 
 start_age_vec <- function(cohort) {
-    .Call('_narwind_start_age_vec', PACKAGE = 'narwind', cohort)
+    .Call(`_narwindows_start_age_vec`, cohort)
 }
 
 survivorship <- function(age, a1 = 0.1, a2 = 0, a3 = 0.01, b1 = 60, b3 = 8, longevity = 69) {
-    .Call('_narwind_survivorship', PACKAGE = 'narwind', age, a1, a2, a3, b1, b3, longevity)
+    .Call(`_narwindows_survivorship`, age, a1, a2, a3, b1, b3, longevity)
 }
 
 survivorship_vec <- function(age, a1 = 0.1, a2 = 0, a3 = 0.01, b1 = 60, b3 = 8, longevity = 69) {
-    .Call('_narwind_survivorship_vec', PACKAGE = 'narwind', age, a1, a2, a3, b1, b3, longevity)
+    .Call(`_narwindows_survivorship_vec`, age, a1, a2, a3, b1, b3, longevity)
 }
 
 entanglement_event <- function(p_entangled = 0, p_head = 0.732, p_mortality = 0, p_severity = as.numeric( c(0.819, 0.140, 0.041))) {
-    .Call('_narwind_entanglement_event', PACKAGE = 'narwind', p_entangled, p_head, p_mortality, p_severity)
+    .Call(`_narwindows_entanglement_event`, p_entangled, p_head, p_mortality, p_severity)
 }
 
 start_mouth <- function(cohort, age) {
-    .Call('_narwind_start_mouth', PACKAGE = 'narwind', cohort, age)
+    .Call(`_narwindows_start_mouth`, cohort, age)
 }
 
 start_bcondition <- function(cohort) {
-    .Call('_narwind_start_bcondition', PACKAGE = 'narwind', cohort)
+    .Call(`_narwindows_start_bcondition`, cohort)
 }
 
 start_bcondition_vec <- function(cohort, month = 10L) {
-    .Call('_narwind_start_bcondition_vec', PACKAGE = 'narwind', cohort, month)
+    .Call(`_narwindows_start_bcondition_vec`, cohort, month)
 }
 
 agL <- function(age, n = 1L, sd = FALSE) {
-    .Call('_narwind_agL', PACKAGE = 'narwind', age, n, sd)
+    .Call(`_narwindows_agL`, age, n, sd)
 }
 
 agL_vec <- function(age, sd = FALSE) {
-    .Call('_narwind_agL_vec', PACKAGE = 'narwind', age, sd)
+    .Call(`_narwindows_agL_vec`, age, sd)
 }
 
 age2length <- function(age, gompertz) {
-    .Call('_narwind_age2length', PACKAGE = 'narwind', age, gompertz)
+    .Call(`_narwindows_age2length`, age, gompertz)
 }
 
 age2length_vec <- function(age) {
-    .Call('_narwind_age2length_vec', PACKAGE = 'narwind', age)
+    .Call(`_narwindows_age2length_vec`, age)
 }
 
 create_mat <- function() {
-    .Call('_narwind_create_mat', PACKAGE = 'narwind')
+    .Call(`_narwindows_create_mat`)
 }
 
 mL <- function(n = 1L, sd = FALSE) {
-    .Call('_narwind_mL', PACKAGE = 'narwind', n, sd)
+    .Call(`_narwindows_mL`, n, sd)
 }
 
 length2mass <- function(L, param, lean = 0.5435686) {
-    .Call('_narwind_length2mass', PACKAGE = 'narwind', L, param, lean)
+    .Call(`_narwindows_length2mass`, L, param, lean)
 }
 
 length2mass_vec <- function(L, lean = 0.5435686) {
-    .Call('_narwind_length2mass_vec', PACKAGE = 'narwind', L, lean)
+    .Call(`_narwindows_length2mass_vec`, L, lean)
 }
 
 increment_cohort <- function(cohort, age, female, bc, min_bc, reprod, abort) {
-    .Call('_narwind_increment_cohort', PACKAGE = 'narwind', cohort, age, female, bc, min_bc, reprod, abort)
+    .Call(`_narwindows_increment_cohort`, cohort, age, female, bc, min_bc, reprod, abort)
 }
 
 feeding_threshold <- function(min_prey, D) {
-    .Call('_narwind_feeding_threshold', PACKAGE = 'narwind', min_prey, D)
+    .Call(`_narwindows_feeding_threshold`, min_prey, D)
 }
 
 feeding_threshold_vec <- function(min_prey, D) {
-    .Call('_narwind_feeding_threshold_vec', PACKAGE = 'narwind', min_prey, D)
+    .Call(`_narwindows_feeding_threshold_vec`, min_prey, D)
 }
 
 feeding_effort <- function(eta, rho, bc) {
-    .Call('_narwind_feeding_effort', PACKAGE = 'narwind', eta, rho, bc)
+    .Call(`_narwindows_feeding_effort`, eta, rho, bc)
 }
 
 feeding_effort_vec <- function(eta, rho, bc) {
-    .Call('_narwind_feeding_effort_vec', PACKAGE = 'narwind', eta, rho, bc)
+    .Call(`_narwindows_feeding_effort_vec`, eta, rho, bc)
 }
 
 deg2radians <- function(angle) {
-    .Call('_narwind_deg2radians', PACKAGE = 'narwind', angle)
+    .Call(`_narwindows_deg2radians`, angle)
 }
 
 gape_size <- function(L, omega, alpha) {
-    .Call('_narwind_gape_size', PACKAGE = 'narwind', L, omega, alpha)
+    .Call(`_narwindows_gape_size`, L, omega, alpha)
 }
 
 filtration_rate <- function(A, lambda_gape, V, E_capt, lambda_capt) {
-    .Call('_narwind_filtration_rate', PACKAGE = 'narwind', A, lambda_gape, V, E_capt, lambda_capt)
+    .Call(`_narwindows_filtration_rate`, A, lambda_gape, V, E_capt, lambda_capt)
 }
 
 milk_ingestion <- function(E_milk, M, E_gland, mu_female, delta_female, D) {
-    .Call('_narwind_milk_ingestion', PACKAGE = 'narwind', E_milk, M, E_gland, mu_female, delta_female, D)
+    .Call(`_narwindows_milk_ingestion`, E_milk, M, E_gland, mu_female, delta_female, D)
 }
 
 milk_assimilation <- function(t, T_lac, a, zeta) {
-    .Call('_narwind_milk_assimilation', PACKAGE = 'narwind', t, T_lac, a, zeta)
+    .Call(`_narwindows_milk_assimilation`, t, T_lac, a, zeta)
 }
 
 milk_assimilation_vec <- function(t, T_lac, a, zeta) {
-    .Call('_narwind_milk_assimilation_vec', PACKAGE = 'narwind', t, T_lac, a, zeta)
+    .Call(`_narwindows_milk_assimilation_vec`, t, T_lac, a, zeta)
 }
 
 milk_supply <- function(kappa, target_condition, M, R, zeta) {
-    .Call('_narwind_milk_supply', PACKAGE = 'narwind', kappa, target_condition, M, R, zeta)
+    .Call(`_narwindows_milk_supply`, kappa, target_condition, M, R, zeta)
 }
 
 milk_supply_vec <- function(kappa, target_condition, M, R, zeta) {
-    .Call('_narwind_milk_supply_vec', PACKAGE = 'narwind', kappa, target_condition, M, R, zeta)
+    .Call(`_narwindows_milk_supply_vec`, kappa, target_condition, M, R, zeta)
 }
 
 mammary_mass <- function(M) {
-    .Call('_narwind_mammary_mass', PACKAGE = 'narwind', M)
+    .Call(`_narwindows_mammary_mass`, M)
 }
 
 milk_production <- function(m) {
-    .Call('_narwind_milk_production', PACKAGE = 'narwind', m)
+    .Call(`_narwindows_milk_production`, m)
 }
 
 RMR <- function(M) {
-    .Call('_narwind_RMR', PACKAGE = 'narwind', M)
+    .Call(`_narwindows_RMR`, M)
 }
 
 #' Costs of locomotion
 locomotor_costs <- function(mass, distance, strokerate_foraging, strokerate, glide_foraging, glide, t_feed, t_activ, scalar) {
-    .Call('_narwind_locomotor_costs', PACKAGE = 'narwind', mass, distance, strokerate_foraging, strokerate, glide_foraging, glide, t_feed, t_activ, scalar)
+    .Call(`_narwindows_locomotor_costs`, mass, distance, strokerate_foraging, strokerate, glide_foraging, glide, t_feed, t_activ, scalar)
 }
 
 placental_maintenance <- function(G) {
-    .Call('_narwind_placental_maintenance', PACKAGE = 'narwind', G)
+    .Call(`_narwindows_placental_maintenance`, G)
 }
 
 heat_gestation <- function(birth_mass, delta_m) {
-    .Call('_narwind_heat_gestation', PACKAGE = 'narwind', birth_mass, delta_m)
+    .Call(`_narwindows_heat_gestation`, birth_mass, delta_m)
 }
 
 fetal_tissue_mass <- function(P_b, L) {
-    .Call('_narwind_fetal_tissue_mass', PACKAGE = 'narwind', P_b, L)
+    .Call(`_narwindows_fetal_tissue_mass`, P_b, L)
 }
 
 fetal_blubber_mass <- function(L, BC, M_muscle, M_viscera, M_bones, D_blubber, D_muscle, D_viscera, D_bones) {
-    .Call('_narwind_fetal_blubber_mass', PACKAGE = 'narwind', L, BC, M_muscle, M_viscera, M_bones, D_blubber, D_muscle, D_viscera, D_bones)
+    .Call(`_narwindows_fetal_blubber_mass`, L, BC, M_muscle, M_viscera, M_bones, D_blubber, D_muscle, D_viscera, D_bones)
 }
 
 fetal_mass <- function(days_to_birth, mother_length, bbc = 0L, body_density = 805.07) {
-    .Call('_narwind_fetal_mass', PACKAGE = 'narwind', days_to_birth, mother_length, bbc, body_density)
+    .Call(`_narwindows_fetal_mass`, days_to_birth, mother_length, bbc, body_density)
 }
 
 fetal_length <- function(days_to_birth, mother_length) {
-    .Call('_narwind_fetal_length', PACKAGE = 'narwind', days_to_birth, mother_length)
+    .Call(`_narwindows_fetal_length`, days_to_birth, mother_length)
 }
 
 growth_cost_old <- function(delta_m, prop_blubber, prop_water, P_lipid_blubber, rho_lipid, rho_protein, D_lipid, D_protein) {
-    .Call('_narwind_growth_cost_old', PACKAGE = 'narwind', delta_m, prop_blubber, prop_water, P_lipid_blubber, rho_lipid, rho_protein, D_lipid, D_protein)
+    .Call(`_narwindows_growth_cost_old`, delta_m, prop_blubber, prop_water, P_lipid_blubber, rho_lipid, rho_protein, D_lipid, D_protein)
 }
 
 growth_cost <- function(leanmass_increment, EDens_lipids, EDens_protein, lipid_in_muscle, lipid_in_viscera, lipid_in_bones, protein_in_muscle, protein_in_viscera, protein_in_bones, prop_muscle, prop_viscera, prop_bones) {
-    .Call('_narwind_growth_cost', PACKAGE = 'narwind', leanmass_increment, EDens_lipids, EDens_protein, lipid_in_muscle, lipid_in_viscera, lipid_in_bones, protein_in_muscle, protein_in_viscera, protein_in_bones, prop_muscle, prop_viscera, prop_bones)
+    .Call(`_narwindows_growth_cost`, leanmass_increment, EDens_lipids, EDens_protein, lipid_in_muscle, lipid_in_viscera, lipid_in_bones, protein_in_muscle, protein_in_viscera, protein_in_bones, prop_muscle, prop_viscera, prop_bones)
 }
 
 fatdeposition_cost <- function(fatmass_increment, energy_density_lipids, energy_density_protein, lipid_in_blubber, protein_in_blubber) {
-    .Call('_narwind_fatdeposition_cost', PACKAGE = 'narwind', fatmass_increment, energy_density_lipids, energy_density_protein, lipid_in_blubber, protein_in_blubber)
+    .Call(`_narwindows_fatdeposition_cost`, fatmass_increment, energy_density_lipids, energy_density_protein, lipid_in_blubber, protein_in_blubber)
 }
 
 add_calf <- function(n, attr, sex, nonreprod) {
-    .Call('_narwind_add_calf', PACKAGE = 'narwind', n, attr, sex, nonreprod)
+    .Call(`_narwindows_add_calf`, n, attr, sex, nonreprod)
 }
 
 findminval <- function(num1, num2) {
-    .Call('_narwind_findminval', PACKAGE = 'narwind', num1, num2)
+    .Call(`_narwindows_findminval`, num1, num2)
 }
 
 pbirth <- function(now, enter, timespan = 60) {
-    .Call('_narwind_pbirth', PACKAGE = 'narwind', now, enter, timespan)
+    .Call(`_narwindows_pbirth`, now, enter, timespan)
 }
 
 pleave <- function(now, enter, cohortID, factor, resid) {
-    .Call('_narwind_pleave', PACKAGE = 'narwind', now, enter, cohortID, factor, resid)
+    .Call(`_narwindows_pleave`, now, enter, cohortID, factor, resid)
 }
 
 pbirth_vec <- function(now, enter, timespan = 60) {
-    .Call('_narwind_pbirth_vec', PACKAGE = 'narwind', now, enter, timespan)
+    .Call(`_narwindows_pbirth_vec`, now, enter, timespan)
 }
 
 seq_cpp <- function(start, end, npts) {
-    .Call('_narwind_seq_cpp', PACKAGE = 'narwind', start, end, npts)
+    .Call(`_narwindows_seq_cpp`, start, end, npts)
 }
 
 create_hash <- function(x0, y0, x1, y1) {
-    .Call('_narwind_create_hash', PACKAGE = 'narwind', x0, y0, x1, y1)
+    .Call(`_narwindows_create_hash`, x0, y0, x1, y1)
 }
 
 geoD <- function(mat, x0, y0, x1, y1, limits, resolution) {
-    .Call('_narwind_geoD', PACKAGE = 'narwind', mat, x0, y0, x1, y1, limits, resolution)
+    .Call(`_narwindows_geoD`, mat, x0, y0, x1, y1, limits, resolution)
 }
 
 geoDist <- function(mat, x0, y0, x1, y1, limits, resolution, r) {
-    .Call('_narwind_geoDist', PACKAGE = 'narwind', mat, x0, y0, x1, y1, limits, resolution, r)
+    .Call(`_narwindows_geoDist`, mat, x0, y0, x1, y1, limits, resolution, r)
 }
 
 #' Simulate right whale movements
 NULL
 
 NARW_simulator <- function(cohortID, seus, gsl, support, densities, densities_seus, densities_gsl, densitySeq, latentDensitySeq, prey, fishing, vessels, noise, doseresp, daylight, regions, limits, limits_daylight, limits_regions, limits_prey, limits_fishing, limits_vessels, limits_noise, resolution, resolution_daylight, resolution_regions, resolution_prey, resolution_fishing, resolution_vessels, resolution_noise, M, stepsize, xinit, yinit, stressors, growth, starvation, nursing_cessation, piling_hrs, progress) {
-    .Call('_narwind_NARW_simulator', PACKAGE = 'narwind', cohortID, seus, gsl, support, densities, densities_seus, densities_gsl, densitySeq, latentDensitySeq, prey, fishing, vessels, noise, doseresp, daylight, regions, limits, limits_daylight, limits_regions, limits_prey, limits_fishing, limits_vessels, limits_noise, resolution, resolution_daylight, resolution_regions, resolution_prey, resolution_fishing, resolution_vessels, resolution_noise, M, stepsize, xinit, yinit, stressors, growth, starvation, nursing_cessation, piling_hrs, progress)
+    .Call(`_narwindows_NARW_simulator`, cohortID, seus, gsl, support, densities, densities_seus, densities_gsl, densitySeq, latentDensitySeq, prey, fishing, vessels, noise, doseresp, daylight, regions, limits, limits_daylight, limits_regions, limits_prey, limits_fishing, limits_vessels, limits_noise, resolution, resolution_daylight, resolution_regions, resolution_prey, resolution_fishing, resolution_vessels, resolution_noise, M, stepsize, xinit, yinit, stressors, growth, starvation, nursing_cessation, piling_hrs, progress)
 }
 
 evalEnvironment <- function(density, density_seus, density_gsl, prey, fishing, vessels, noise, daylight, regions, limits, limits_daylight, limits_regions, limits_prey, limits_fishing, limits_vessels, limits_noise, resolution, resolution_daylight, resolution_regions, resolution_prey, resolution_fishing, resolution_vessels, resolution_noise, x, y, layer) {
-    .Call('_narwind_evalEnvironment', PACKAGE = 'narwind', density, density_seus, density_gsl, prey, fishing, vessels, noise, daylight, regions, limits, limits_daylight, limits_regions, limits_prey, limits_fishing, limits_vessels, limits_noise, resolution, resolution_daylight, resolution_regions, resolution_prey, resolution_fishing, resolution_vessels, resolution_noise, x, y, layer)
+    .Call(`_narwindows_evalEnvironment`, density, density_seus, density_gsl, prey, fishing, vessels, noise, daylight, regions, limits, limits_daylight, limits_regions, limits_prey, limits_fishing, limits_vessels, limits_noise, resolution, resolution_daylight, resolution_regions, resolution_prey, resolution_fishing, resolution_vessels, resolution_noise, x, y, layer)
 }
 

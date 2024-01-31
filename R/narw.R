@@ -1,11 +1,13 @@
 #' Run the bioenergetic model
 #'
 #' Simulate right whale movements and behavior across a calendar year.
+#' 
 #' @export
 #' @param nsim Number of simulated animals
 #' @param scenario 
 #' @param n.prop Number of proposals used in the importance sampler (Michelot, 2019)
 #' @import data.table
+#' @import sf
 #' @importFrom foreach `%dopar%`
 #' @importFrom doParallel registerDoParallel
 #' @author Phil J. Bouchet

@@ -1,3 +1,13 @@
+## usethis namespace: start
+#' @useDynLib narwindows, .registration = TRUE
+## usethis namespace: end
+NULL
+
+## usethis namespace: start
+#' @importFrom Rcpp sourceCpp
+## usethis namespace: end
+NULL
+
 #' Population consequences of offshore wind
 #'
 #' The \code{narwind} package provides methods for fitting and selecting among behavioural dose-response models using Bayesian reversible jump Markov Chain Monte Carlo (rjMCMC). 

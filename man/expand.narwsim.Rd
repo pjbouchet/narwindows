@@ -13,8 +13,6 @@
   rw.start = c(0.05, 0.05),
   max.iter = 500,
   ntune = 500,
-  plot = TRUE,
-  plot.n = 200,
   ...
 )
 }

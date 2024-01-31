@@ -34,7 +34,7 @@ RdMacros: Rdpack
 ByteCompile: true
 License: GPL (>= 2)
 Imports: 
-    Rcpp (>= 1.0.8),
+    Rcpp,
     countreg,
     data.table,
     dismo,
